@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Orinoco, trouvez l'ours en peluche fait à la main qui est fait pour vous !">
+        <title>Orinico - Panier</title>
+
+        <link rel="stylesheet" href="./css/style.css" />
+    </head>
+    <body>
+        <div class= "container">
+            <!--HEADER-->
+            <header class="bg-first">
+                <div id="head">
+                    <a href="index.html">
+                        <img src="logo.jpg" alt="Orinico" id="logo">
+                    </a>
+                    <nav>
+                        <ul>
+                            <li>
+                                <a href="form.html" class="basket-link">Panier</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </header>
+            <!--HEADER-->
+            <!--basket-->
+            <section class="bg-first contain-product">
+                <h2>Votre panier</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Produit</td>
+                            <th>Quantité</td>
+                            <th>Prix</td>
+                            <th>Total</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>Norbert</td>
+                            <td><input type="number" id="quantity" name="quantity" placeholder="1"></td>
+                            <td>29,00</td>
+                            <td>29,00</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td></td>
+                            <th></th>
+                            <th>Total</td>
+                            <td>29,00</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </section>
+            <!--basket-->
+            <!--infos-->
+            <section class="bg-first contain-product">
+                <h2>Vos renseignements</h2>
+                <div class="personal-info">
+                    <div>
+                        <label>Nom</label> <br />
+                        <input type="text" id="firstname" name="firstname">
+                    </div>
+                    <div>
+                        <label>Prenom</label><br />
+                        <input type="text" id="lastname" name="lastname">
+                    </div>
+                    <div>
+                        <label>Adresse mail</label> <br />
+                        <input type="email" id="email" name="email">
+                    </div>
+                    <div>
+                        <label>Téléphone</label><br />
+                        <input type="number" id="phonenumber" name="phonenumber">
+                    </div>
+                    <div>
+                        <label>Adresse</label><br />
+                        <input type="text" id="adress" name="adress">
+                    </div>
+                    <div>
+                        <label>Code postal</label><br />
+                        <input type="number" id="zipcode" name="zipcode">
+                    </div>
+                    <div>
+                        <label>Ville</label><br />
+                        <input type="text" id="place" name="place">
+                    </div>
+                </div>
+
+            </section>
+            <!--infos-->
+            <!--button-->
+            <section class="bg-first contain-product validate">
+                <button class="valid" type="submit">
+                    <span>Valider ma commande</span>
+                </button>
+            </section>
+            <!--button-->
+            <!--FOOTER-->
+            <footer>
+                <div class="bg-first foot">
+                    <h3>Orinico</h3>
+                    <nav>
+                        <ul class="foot-list">
+                            <li>
+                                <a href="#">Nous contacter</a>
+                            </li>
+                            <li>
+                                <a href="mailto:contact@orinico.fr">Mentions légales</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+
+            </footer>
+            <!--FOOTER-->
+        </div>
+        <script type="text/javascript" src='./js/index.js'></script>
+        <script src="https://kit.fontawesome.com/059e520a91.js" crossorigin="anonymous"></script> 
+    </body>
+
+</html>

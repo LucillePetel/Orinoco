@@ -1,0 +1,246 @@
+
+
+body{
+margin: 2rem 1rem 2rem 1rem;
+}
+
+header {
+    height: 85px;
+}
+
+#head{
+    padding-top: 10px;
+    margin: 0 5% 0 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bg-first {
+    background-color: #f3E9F1;
+    border-radius: 1rem;
+}
+
+#logo {
+    max-width: 85%;
+}
+
+.basket-link{
+    font-weight: bold;
+    font-size: 18px;
+    margin-right: 1rem;
+}
+
+ul {
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #000000;
+}
+
+
+#products-list {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    gap: 1rem; 
+}
+
+.validate {
+    display: flex;
+    justify-content: center;
+}
+
+.valid {
+    width: 250px;
+    margin: 0.5rem;
+}
+
+.confirm {
+    padding-left: 15px;
+}
+
+.thanks {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.picture-bear {
+    width: 100%;
+    height: 15rem;
+    object-fit: cover;
+}
+
+.picture-teddy {
+    width: 100%;
+    height: 20rem;
+    object-fit: cover;  
+}
+
+.contain-color {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.5rem;
+    margin: 2rem 0 2rem 0;
+    width: 200px;
+}
+
+.color-1 {
+    background-color: tan;
+}
+
+.color-2 {
+    background-color: chocolate;
+}
+
+.color-3 {
+    background-color: black;
+}
+
+.color-4 {
+    background-color: white;
+}
+
+.color-5 {
+    background-color: brown;
+}
+
+.color-6 {
+    background-color: blue;
+}
+
+.color-7 {
+    background-color: pink;
+}
+
+.color-8 {
+    background-color: beige;
+}
+
+.color-choice {
+    width: 40px;
+    height: 40px;
+    border-radius: 2rem;
+}
+
+.card-product {
+    margin: 1rem
+}
+
+
+
+.product-name {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: flex-end;
+    margin: 0 1.5rem 2rem 0;
+}
+
+
+.contain-product {
+    padding: 0.5rem;
+    margin: 1rem 0 1rem 0;
+}
+
+#quantity {
+    width: 2.5rem;
+}
+    
+button {
+    width: 100%;
+    background-color: #A67BFA;
+    padding: 0.5rem;
+    color: #ffffff;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 0.7rem;
+    border-style: none;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1rem;
+}
+
+td, th {
+    text-align: center;
+    padding: 0.7rem 0 0.7rem 0;
+}
+
+thead {
+    background-color: #A67BFA;
+    color: #ffffff;
+
+}
+
+tfoot {
+    background-color: #ffffff;
+}
+
+.personal-info {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    margin: 0 0 1rem 1rem;
+}
+
+footer{
+    width:100%;
+}
+   
+.foot {
+    padding: 5px 15px 5px 15px;
+}
+
+@media screen and (min-width: 420px) {
+    .personal-info {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+
+@media screen and (min-width: 768px) {
+    #products-list{
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .personal-info {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    #products-list{
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+    .card-responsive{
+        display: flex;
+    }
+    .product-info {
+        margin-left: 1rem;
+    }
+    body {
+        width: 80%;
+        margin: 2rem auto 2rem auto;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .personal-info {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+   
