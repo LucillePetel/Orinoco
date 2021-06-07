@@ -1,5 +1,4 @@
-// Page d'accueil // 
 
-
-
+let myApi = new API(); 
+myApi.getAllArticles()
 
