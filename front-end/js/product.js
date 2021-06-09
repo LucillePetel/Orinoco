@@ -1,5 +1,7 @@
 // Page produit // 
 
 let myApi = new API(); 
-myApi.getArticleById()
+myApi.getArticleById();
+
+
 

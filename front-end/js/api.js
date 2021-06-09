@@ -7,28 +7,33 @@ class API {
 
     getAllArticles() {
         fetch(this.url)
-        .then(response => response.json())
-        .then(data => {
-            for(let i = 0; i < data.length; i++) {
-                let newArticle = new Article(data[i].colors, data[i]._id, data[i].name, data[i].price, data[i].description, data[i].imageUrl)  
-                newArticle.addOnIndexPage("product-list")
-                console.log(newArticle)
-            }
-        }) 
+            .then(response => response.json())
+            .then(data => {
+                for(let i = 0; i < data.length; i++) {
+                    let newArticle = new Article(data[i].colors, data[i]._id, data[i].name, data[i].price, data[i].description, data[i].imageUrl)  
+                    newArticle.addOnIndexPage("product-list")
+                }
+            }) 
         
     }
 
     getArticleById() {
-        fetch(this.url + "/" + _id)
-        .then(response => response.json())
+        let params = new URLSearchParams(document.location.search.substring(1));
+        fetch(this.url + "/" + params.get("id"))
+            .then(response => response.json())
             .then(data => {
-                for(let i = 0; i < data.length; i++) {
-                    let newArticle = new Article(data[i].colors, data[i]._id, data[i].name, data[i].price, data[i].description, data[i].imageUrl)
-                    newArticle.addOnProcuctPage("product")
-                }
+                    let newArticle = new Article(data.colors, data._id, data.name, data.price, data.description, data.imageUrl)
+                    newArticle.addOnproductPage("contain-product")
+                    console.log(newArticle)
             })
     }
+    
 }
+
+
+
+
+
 
 
 
