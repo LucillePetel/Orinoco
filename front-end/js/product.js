@@ -4,4 +4,3 @@ let myApi = new API();
 myApi.getArticleById();
 
 
-

@@ -20,7 +20,7 @@ class Article {
                         <figcaption>
                             <h2>${this.name}</h2>
                             <p>${this.description}</p>
-                            <span class="price">${this.price}</span>
+                            <span class="price">${(Math.round(this.price) / 100).toFixed(2)} €</span>
                         </figcaption>
                     </figure>
                 </a>
@@ -30,7 +30,9 @@ class Article {
 
     addOnproductPage() {
         let contain = document.getElementById("contain-product")
-        const insertOnProduct = 
+        console.log(this.colors)
+
+        const insertHTML = 
             `<div class="card-product card-responsive">
                 <div>
                     <img src="${this.imageUrl}" alt="Norbert" class="picture-teddy">
@@ -47,22 +49,28 @@ class Article {
                         </div>
                     </div>
                     <p>${this.description}</p>
-                    <div class="contain-color">
-                        <select name="colors" id="colors">
-                            <option value="">Choisissez une couleur</option>
-                            <option value="colors"></option>
+                    <div class="contain-color" class="all-colors">
+                        <select name="colors" id="colors" required>
+                            <option value="">Choisissez votre couleur</option>
                         </select>
                     </div>
                     <span>Quantité :
                         <input type="number" id="quantity" name="quantity" placeholder="1">
                     </span>
-                    <span class="price">${this.price}</span>
-                    <button>
+                    <span class="price">${(Math.round(this.price) / 100).toFixed(2)} €</span>
+                    <button class="add-btn">
                         <span>Ajouter au panier</span>
                     </button>
                 </div>
             </div>   `
-            contain.innerHTML += insertOnProduct        
+            contain.innerHTML += insertHTML
+            let choice = contain.querySelector("#colors");
+            this.colors.forEach (function (colors) {
+                let option = document.createElement("option");
+                option.value = colors;
+                option.textContent = colors;
+                choice.appendChild(option);
+            })
 
     }
 }

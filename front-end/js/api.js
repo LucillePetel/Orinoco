@@ -24,11 +24,16 @@ class API {
             .then(data => {
                     let newArticle = new Article(data.colors, data._id, data.name, data.price, data.description, data.imageUrl)
                     newArticle.addOnproductPage("contain-product")
-                    console.log(newArticle)
+                    // console.log(newArticle)
+
+                    
             })
+
+
     }
     
 }
+
 
 
 
