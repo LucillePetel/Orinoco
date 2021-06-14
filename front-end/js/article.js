@@ -13,14 +13,14 @@ class Article {
     addOnIndexPage() {
         let container = document.getElementById("products-list")
         const toInsert = 
-            `<li class="bg-first">
+            `<li class="bg-first card-teddies">
                 <a href="product.html?id=${this.id}">
                     <figure class="card-product">
                         <img src="${this.imageUrl}" alt="Norbert" class="picture-bear">
                         <figcaption>
                             <h2>${this.name}</h2>
                             <p>${this.description}</p>
-                            <span class="price">${(Math.round(this.price) / 100).toFixed(2)} €</span>
+                            <span class="price">${(Math.round(this.price) / 100).toFixed(2).replace(".",",")} €</span>
                         </figcaption>
                     </figure>
                 </a>
@@ -55,9 +55,9 @@ class Article {
                         </select>
                     </div>
                     <span>Quantité :
-                        <input type="number" id="quantity" name="quantity" placeholder="1">
+                        <input type="number" id="quantity" name="quantity" placeholder="1" value="1">
                     </span>
-                    <span class="price">${(Math.round(this.price) / 100).toFixed(2)} €</span>
+                    <span class="price">${(Math.round(this.price) / 100).toFixed(2).replace(".",",")} €</span>
                     <button class="add-btn">
                         <span>Ajouter au panier</span>
                     </button>
@@ -70,6 +70,20 @@ class Article {
                 option.value = colors;
                 option.textContent = colors;
                 choice.appendChild(option);
+            })
+
+            let customerChoise = document.querySelector(".add-btn");
+
+            customerChoise.addEventListener('click', () => {
+
+                //Récupération choix couleur et stockage dans variable global this
+                this.colorChoice = document.querySelector("#colors");
+                this.colorChoice = this.colorChoice.options[this.colorChoice.selectedIndex].value;
+
+                //Récupération quantité et stockage dans variable global this
+                this.quantityChoice = document.getElementById("quantity").value;
+                
+                addToBasket(this);
             })
 
     }
