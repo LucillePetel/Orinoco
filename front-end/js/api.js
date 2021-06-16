@@ -19,16 +19,19 @@ class API {
 
     getArticleById() {
         let params = new URLSearchParams(document.location.search.substring(1));
+        if (params.get("id")) {
         fetch(this.url + "/" + params.get("id"))
             .then(response => response.json())
             .then(data => {
                     let newArticle = new Article(data.colors, data._id, data.name, data.price, data.description, data.imageUrl)
                     newArticle.addOnproductPage("contain-product")
+            
                     
             })
-
-
+        }
     }
+
+
     
 }
 

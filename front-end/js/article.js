@@ -16,7 +16,7 @@ class Article {
             `<li class="bg-first card-teddies">
                 <a href="product.html?id=${this.id}">
                     <figure class="card-product">
-                        <img src="${this.imageUrl}" alt="Norbert" class="picture-bear">
+                        <img src="${this.imageUrl}" alt="${this.name}" class="picture-bear">
                         <figcaption>
                             <h2>${this.name}</h2>
                             <p>${this.description}</p>
@@ -30,12 +30,11 @@ class Article {
 
     addOnproductPage() {
         let contain = document.getElementById("contain-product")
-        console.log(this.colors)
 
         const insertHTML = 
             `<div class="card-product card-responsive">
                 <div>
-                    <img src="${this.imageUrl}" alt="Norbert" class="picture-teddy">
+                    <img src="${this.imageUrl}" alt="${this.name}" class="picture-teddy">
                 </div>
                 <div class="product-info">
                     <div class="product-name">
@@ -81,10 +80,10 @@ class Article {
                 this.colorChoice = this.colorChoice.options[this.colorChoice.selectedIndex].value;
 
                 //Récupération quantité et stockage dans variable global this
-                this.quantityChoice = document.getElementById("quantity").value;
+                this.quantityChoice = parseInt(document.getElementById("quantity").value);
                 
                 addToBasket(this);
             })
-
     }
+
 }

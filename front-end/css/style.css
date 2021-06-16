@@ -147,6 +147,10 @@ td, th {
     padding: 0.7rem 0 0.7rem 0;
 }
 
+th {
+    font-size: 1.2rem;
+}
+
 thead {
     background-color: #A67BFA;
     color: #ffffff;
@@ -172,6 +176,7 @@ footer{
     padding: 5px 15px 5px 15px;
     margin-top: 1rem;
 }
+
 
 @media screen and (min-width: 420px) {
     .personal-info {
