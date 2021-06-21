@@ -31,7 +31,7 @@ function addOnBasketPage() {
 
         <section class="bg-first contain-product">
             <h2>Vos renseignements</h2>
-            <form class="personal-info">
+            <form class="personal-info" id="customer-form">
                 <div>
                     <label>Nom</label> <br />
                     <input type="text" id="firstname" name="firstname">
@@ -43,10 +43,12 @@ function addOnBasketPage() {
                 <div>
                     <label>Adresse mail</label> <br />
                     <input type="email" id="email" name="email">
+                    <small></small>
                 </div>
                 <div>
                     <label>Téléphone</label><br />
                     <input type="tel" id="phonenumber" name="phonenumber">
+                    <small></small>
                 </div>
                 <div>
                     <label>Adresse</label><br />
@@ -54,7 +56,7 @@ function addOnBasketPage() {
                 </div>
                 <div>
                     <label>Code postal</label><br />
-                    <input type="number" id="zipcode" name="zipcode">
+                    <input type="text" id="zipcode" name="zipcode">
                 </div>
                 <div>
                     <label>Ville</label><br />
@@ -65,7 +67,7 @@ function addOnBasketPage() {
         </section>
         
         <section class="bg-first contain-product validate">
-            <button class="valid" type="submit">
+            <button class="valid" type="submit" >
                 <span>Valider ma commande</span>
             </button>
         </section>`
@@ -110,13 +112,61 @@ function addOnBasketPage() {
                             </tr>` 
             totalPlace.innerHTML = totalLine 
         }
-
-
     }
 
 
+    let form = document.querySelector('#customer-form');
+
+    form.email.addEventListener('change', function(){
+        validEmail(this)
+    });
+
+    // -----------------------Verification Email-----------------------
+    const validEmail = function (inputEmail) {
+        let emailRegExp = new RegExp('^[a-zA-Z0-9.-_]+[@]{1}[a-zA-Z0-9.-_]+[.]{1}[a-z]{2,10}$', 'g'); 
 
 
+        //récuperation balise small
+        let small = inputEmail.nextElementSibling 
+        
+        //Test expression regulière 
+        if (emailRegExp.test(inputEmail.value)) {
+            small.innerHTML = "Adresse Valide"
+            small.classList.remove('failure')
+            small.classList.add('success')
+        } else {
+            small.innerHTML = "Adresse Non Valide"
+            small.classList.remove('success')
+            small.classList.add('failure')
+        }
+    }
 
+    // -----------------------Verification téléphone-----------------------
+
+    form.phonenumber.addEventListener('change', function(){
+        validPhoneNumber(this)
+    });
+
+    const validPhoneNumber = function(inputPhoneNumber) {
+
+        let phoneRegExp = new RegExp('^[0-9]{10}')
+
+        let smallPhoneNumber = inputPhoneNumber.nextElementSibling
+
+        if (phoneRegExp.test(inputPhoneNumber.value)) {
+            smallPhoneNumber.innerHTML = "Téléphone Valide"
+            smallPhoneNumber.classList.remove('failure')
+            smallPhoneNumber.classList.add('success')
+        } else {
+            smallPhoneNumber.innerHTML = "Téléphone Non Valide"
+            smallPhoneNumber.classList.remove('success')
+            smallPhoneNumber.classList.add('failure')
+        }
+    }
+
+  
+
+
+    
 }
 
