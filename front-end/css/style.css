@@ -58,13 +58,32 @@ a {
 }
 
 .validate {
-    display: flex;
-    justify-content: center;
+    background-color: #A67BFA;
+    padding: 0.5rem;
+    color: #ffffff;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 0.7rem;
+    border-style: none;
 }
 
-.valid {
-    width: 250px;
-    margin: 0.5rem;
+button {
+    width: 100%;
+    background-color: #A67BFA;
+    padding: 0.5rem;
+    color: #ffffff;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 0.7rem;
+    border-style: none;   
+}
+
+button:hover {
+    background-color: #A667BB;
+    transform:scale(1.02);
+    transition: all 0.3s;
+    cursor: pointer;
+    
 }
 
 .confirm {
@@ -117,18 +136,9 @@ a {
     width: 2.5rem;
 }
     
-button {
-    width: 100%;
-    background-color: #A67BFA;
-    padding: 0.5rem;
-    color: #ffffff;
-    font-size: 1.1rem;
-    font-weight: bold;
-    border-radius: 0.7rem;
-    border-style: none;   
-}
 
-button:hover {
+
+.validate:hover {
     background-color: #A667BB;
     transform:scale(1.02);
     transition: all 0.3s;
@@ -184,6 +194,10 @@ footer{
 
 .failure {
     color: red;
+}
+
+input {
+    margin-bottom: 1rem;
 }
 
 
