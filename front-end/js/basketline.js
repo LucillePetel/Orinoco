@@ -18,7 +18,7 @@ function basketLine(product) {
 
 
         let totalLine = `<tr>
-                            <td>Vider votre panier <button id="clear-line"><i class="fas fa-trash" ></button></td>
+                            <td>Vider votre panier <button id="clear-basket"><i class="fas fa-trash" ></button></td>
                             <td></td>
                             <th>Montant total</th>
                             <td>${(Math.round(totalTab) / 100).toFixed(2).replace(".",",")} €</td>

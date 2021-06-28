@@ -50,7 +50,7 @@ class Article {
                     <p>${this.description}</p>
                     <div class="contain-color" class="all-colors">
                         <select name="colors" id="colors" required>
-                            <option value="">Choisissez votre couleur</option>
+                            
                         </select>
                     </div>
                     <span>Quantité :
@@ -83,6 +83,7 @@ class Article {
                 this.quantityChoice = parseInt(document.getElementById("quantity").value);
                 
                 addToBasket(this);
+                alert('l\'article vient d\'être ajouté au panier')
             })
     }
 

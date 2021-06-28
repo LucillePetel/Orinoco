@@ -1,10 +1,12 @@
 function deleteBasket() {
-    let clearProduct = document.getElementById("clear-line")
+    let clearAllProduct = document.getElementById("clear-basket")
 
-    clearProduct.addEventListener('click', function () {
+
+    clearAllProduct.addEventListener('click', function () {
         sessionStorage.removeItem('basket');
-        sessionStorage.removeItem('totalOrder');
-    
+        sessionStorage.removeItem('totalOrder'); 
+
+        window.location.reload();
     })
 
 }
