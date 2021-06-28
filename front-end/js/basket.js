@@ -13,7 +13,7 @@ function addOnBasketPage() {
                 <thead>
                     <tr>
                         <th>Produit</th>                    
-                        <th>Quantité</th>                        
+                        <th>Qté</th>                    
                         <th>Prix</th>
                         <th>Total</th>
                     </tr>
@@ -81,6 +81,7 @@ function addOnBasketPage() {
     
     //appel de la fonction basketLine
     basketLine(basket)
+    deleteBasket()
 
 
     let form = document.querySelector('#customer-form');

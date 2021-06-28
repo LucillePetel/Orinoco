@@ -11,6 +11,7 @@ function addToApi(toSend) {
         return response.json();
     }) 
     .then( r => {
+        sessionStorage.removeItem('basket');
         window.location.replace("./confirm.html");
     })
     .catch((e) => {
