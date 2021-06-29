@@ -7,7 +7,7 @@ addOnBasketPage()
 function addOnBasketPage() {
     let basketPage = document.getElementById("contain-basket");
     const insertBasketHTML = 
-        `<section class="bg-first">
+        `<section class="bg-first basket-style">
             <h2>Votre panier</h2>
             <table>
                 <thead>
@@ -27,7 +27,7 @@ function addOnBasketPage() {
             </table>
         </section>
 
-        <section class="bg-first contain-product">
+        <section class="bg-first contain-product basket-style">
             <h2>Vos renseignements</h2>
             <form method="POST" class="personal-info" id="customer-form">
                 <div>
