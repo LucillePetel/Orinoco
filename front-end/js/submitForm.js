@@ -1,24 +1,19 @@
 
 function addToApi(toSend) {
     fetch('http://localhost:3000/api/teddies/order', {
-        header: {
+        method: 'POST',
+        headers: {
             'Content-Type': 'application/json'
         },
-        method: "POST",
-        body: JSON.stringify(toSend) 
+        body: toSend
     })
-    .then(response => {
-        return response.json();
-    }) 
-    .then( r => {
+    .then(response => response.json())
+    .then(json => {
+        console.log(json)
+        sessionStorage.setItem('order', JSON.stringify(json));
         sessionStorage.removeItem('basket');
         window.location.replace("./confirm.html");
-    })
-    .catch((e) => {
-        displayError();
-        console.log(e);
-    })
-
+    });
 }
 
 

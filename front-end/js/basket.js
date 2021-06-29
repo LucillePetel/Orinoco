@@ -133,18 +133,12 @@ function addOnBasketPage() {
             i++;
         });
 
-        let toSend = [
-            contact,
-            products
-        ]
-        console.log(toSend);
-
+        const toSend = JSON.stringify({contact, products})
         //Condition pour l'envoi du formulaire 
         if (validName(form.firstname) && validName(form.lastname) && validZipCode(form.zipcode) && validEmail(form.email) && validPhoneNumber(form.phonenumber) && validCity(form.city)) {
-            form.submit()
+            addToApi(toSend)
         } 
 
-        addToApi(toSend)
     });
 
 }

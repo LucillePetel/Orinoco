@@ -81,9 +81,9 @@ class Article {
 
                 //Récupération quantité et stockage dans variable global this
                 this.quantityChoice = parseInt(document.getElementById("quantity").value);
-                
-                addToBasket(this);
                 alert('l\'article vient d\'être ajouté au panier')
+
+                addToBasket(this);
             })
     }
 

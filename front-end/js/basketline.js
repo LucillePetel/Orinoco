@@ -9,7 +9,7 @@ function basketLine(product) {
         totalTab = totalTab + totalByLine;
         let line = `<tr>
                         <td>${product[i].name} ${product[i].colorChoice}</td>
-                        <td>${product[i].quantity} </td>
+                        <td>${product[i].quantity}</td>
                         <th>${(Math.round(product[i].price) / 100).toFixed(2).replace(".",",")} €</td>
                         <td>${(Math.round(totalByLine) / 100).toFixed(2).replace(".",",")} €</td>
                     </tr> `
@@ -27,5 +27,6 @@ function basketLine(product) {
     }
 
     sessionStorage.setItem("totalOrder", JSON.stringify(totalTab));
+
 }
 
