@@ -57,7 +57,7 @@ class Article {
                         <input type="number" id="quantity" name="quantity" placeholder="1" value="1">
                     </span>
                     <span class="price">${(Math.round(this.price) / 100).toFixed(2).replace(".",",")} €</span>
-                    <button class="add-btn">
+                    <button class="add-btn" id="confirm-box">
                         <span>Ajouter au panier</span>
                     </button>
                 </div>
@@ -81,9 +81,13 @@ class Article {
 
                 //Récupération quantité et stockage dans variable global this
                 this.quantityChoice = parseInt(document.getElementById("quantity").value);
-                alert('l\'article vient d\'être ajouté au panier')
-
+                
+                //Appel de la fonction d'ajout au panier
                 addToBasket(this);
+
+
+                messageTeddy() 
+
             })
     }
 

@@ -137,7 +137,9 @@ function addOnBasketPage() {
         //Condition pour l'envoi du formulaire 
         if (validName(form.firstname) && validName(form.lastname) && validZipCode(form.zipcode) && validEmail(form.email) && validPhoneNumber(form.phonenumber) && validCity(form.city)) {
             addToApi(toSend)
-        } 
+        } else {
+            messageForm()
+        }
 
     });
 

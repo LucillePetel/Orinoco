@@ -3,10 +3,12 @@ function basketLine(product) {
     let totalPlace = document.getElementById("total-line")
     let totalTab = 0;
 
+    //Boucle d'ajout au panier
     for (let i = 0; i < product.length; i++) {
         
         let totalByLine = product[i].price * product[i].quantity;
         totalTab = totalTab + totalByLine;
+        //Insertion des lignes de produit ajouté au panier
         let line = `<tr>
                         <td>${product[i].name} ${product[i].colorChoice}</td>
                         <td>${product[i].quantity}</td>
@@ -16,7 +18,7 @@ function basketLine(product) {
         basketPlace.innerHTML += line 
 
 
-
+        //Insertion ligne contenant le bouton suppression du panier et prix total 
         let totalLine = `<tr>
                             <td>Vider votre panier <button id="clear-basket"><i class="fas fa-trash" ></button></td>
                             <td></td>
@@ -30,3 +32,4 @@ function basketLine(product) {
 
 }
 
+  
