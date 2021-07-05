@@ -47,5 +47,3 @@ function addToBasket(item) {
     } 
 
 }
-
-//Appel de la fonction d'affichage de l'alerte

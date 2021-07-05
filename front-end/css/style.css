@@ -8,6 +8,8 @@ header {
     height: 85px;
 }
 
+
+
 #head{
     width: 80%;
     padding-top: 10px;
@@ -35,6 +37,10 @@ header {
     font-weight: bold;
     font-size: 18px;
     margin-right: 1rem;
+}
+
+.basket-title{
+    margin-left: 0.8rem;
 }
 
 #contain-cards {
@@ -174,6 +180,10 @@ button:hover {
     object-fit: cover;
 }
 
+.picture-box{
+    max-width: 920px;
+}
+
 .picture-teddy {
     max-width: 100%;
     object-fit: cover;  
@@ -276,12 +286,20 @@ input {
     margin-bottom: 1rem;
 }
 
+select {
+   width: 50%; 
+   font-size: 0.9rem;
+   padding: 0.2rem;
+   border-width: 0.15rem;
+
+}
+
 .adopt {
     position: fixed;
     display: flex; 
     width: 100%;
     margin-top: 35%;
-
+    z-index: 1;
 }
 
 .message-box {
@@ -312,6 +330,8 @@ input {
     font-size: 1.3rem;
     font-weight:700;
 }
+
+
 
 @media screen and (min-width: 420px) {
     .personal-info {

@@ -23,6 +23,6 @@ function addOnConfirmPage() {
         </div>`
     confirmPage.innerHTML += insertConfirmHTML  
 
-    //Suppression de totalOrder dans sessionStorage
+    //Vide le sessionStorage
     sessionStorage.clear()
 }

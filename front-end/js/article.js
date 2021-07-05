@@ -33,7 +33,7 @@ class Article {
 
         const insertHTML = 
             `<div class="card-product card-responsive">
-                <div>
+                <div class="picture-box">
                     <img src="${this.imageUrl}" alt="${this.name}" class="picture-teddy">
                 </div>
                 <div class="product-info">
@@ -54,7 +54,7 @@ class Article {
                         </select>
                     </div>
                     <span>Quantité :
-                        <input type="number" id="quantity" name="quantity" placeholder="1" value="1">
+                        <input type="number" id="quantity" name="quantity" min="1">
                     </span>
                     <span class="price">${(Math.round(this.price) / 100).toFixed(2).replace(".",",")} €</span>
                     <button class="add-btn" id="confirm-box">
@@ -82,13 +82,16 @@ class Article {
                 //Récupération quantité et stockage dans variable global this
                 this.quantityChoice = parseInt(document.getElementById("quantity").value);
                 
-                //Appel de la fonction d'ajout au panier
-                addToBasket(this);
+                //Appel de la fonction d'ajout au panier si la quantité est suffisante
+                if (this.quantityChoice >= 1) {
+                    addToBasket(this);
+                    setTimeout("messageTeddy()", 400);
+                //Sinon renvoi un message d'erreur 
+                } else {
+                    messageTeddyError()
+                }
 
-
-                messageTeddy() 
-
-            })
+            }) 
     }
 
 }
