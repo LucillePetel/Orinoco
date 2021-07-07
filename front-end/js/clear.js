@@ -34,7 +34,7 @@ function deleteLine() {
                 //Vide le sessionStorage s'il n'y a plus d'article
                 if (deleteLine.length === 1) { sessionStorage.removeItem("basket") }
                 //on recharge la page
-                window.location.href = "basket.html"
+                window.location.reload();
         })
     }
 
