@@ -1,3 +1,4 @@
+//Message d'ajout au panier
 function messageTeddy() {
     const messagePlace = document.getElementById('teddy-message')
     const messageBox = document.createElement('div')
@@ -15,6 +16,7 @@ function messageTeddy() {
     messagePlace.appendChild(messageBox);  
 }
 
+//Message quantité insuffisante
 function messageTeddyError() {
     const messagePlace = document.getElementById('teddy-message')
     const messageBox = document.createElement('div')
@@ -28,10 +30,10 @@ function messageTeddyError() {
                 <a href="index.html" class="button-message">réessayer</a>
             </div>
         </div> `
-    messagePlace.appendChild(messageBox);  
+    messagePlace.appendChild(messageBox);    
 }
 
-
+//Message formulaire incorrect 
 function messageForm() {
     const messagePlace = document.getElementById('teddy-message')
     const messageBox = document.createElement('div')
@@ -48,7 +50,7 @@ function messageForm() {
     messagePlace.appendChild(messageBox);  
 }
 
-
+//Message erreur 
 function messageConfirmError() {
     const messagePlace = document.getElementById('teddy-message')
     const messageBox = document.createElement('div')

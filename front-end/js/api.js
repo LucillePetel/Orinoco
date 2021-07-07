@@ -5,6 +5,7 @@ class API {
         this.url = "http://localhost:3000/api/teddies";
     }
 
+    //Appel de l'API pour la page index, récupération de tous les produits
     getAllArticles() {
         fetch(this.url)
             .then(response => response.json())
@@ -17,6 +18,7 @@ class API {
         
     }
 
+    //Appel de l'API pour les pages product
     getArticleById() {
         let params = new URLSearchParams(document.location.search.substring(1));
         if (params.get("id")) {

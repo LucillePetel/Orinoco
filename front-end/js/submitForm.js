@@ -15,6 +15,7 @@ function addToApi(toSend) {
         //renvoi vers la page de confirmation
         window.location.replace("./confirm.html");
     })
+    //gestion d'erreur
     .catch(err => {
         messageConfirmError(err)
     })

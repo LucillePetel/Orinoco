@@ -12,7 +12,8 @@ function basketLine(product) {
         //Insertion des lignes de produit ajouté au panier
         let line = `<tr>
                         <td>${product[i].name} ${product[i].colorChoice}</td>
-                        <td class="delete-line">${product[i].quantity}</td>
+                        <td>${product[i].quantity}</td>
+                        <td class="delete-line" id="${i}"><button id="clear-line"  onClick="deleteLine(this.value)"><i class="fas fa-trash" ></button></td>
                         <td>${(Math.round(product[i].price) / 100).toFixed(2).replace(".",",")} €</td>
                         <td>${(Math.round(totalByLine) / 100).toFixed(2).replace(".",",")} €</td>
                     </tr> `
@@ -24,13 +25,14 @@ function basketLine(product) {
         let totalLine = `<tr>
                             <td>Vider votre panier <button id="clear-basket"><i class="fas fa-trash" ></button></td>
                             <td></td>
+                            <td></td>
                             <th>Montant total</th>
                             <td>${(Math.round(totalTab) / 100).toFixed(2).replace(".",",")} €</td>
                         </tr>` 
         totalPlace.innerHTML = totalLine 
     }
 
-
+    //sauvegarde du prix total dans le sessionStorage 
     sessionStorage.setItem("totalOrder", JSON.stringify(totalTab));
 
 
