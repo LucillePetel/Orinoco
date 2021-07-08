@@ -9,7 +9,7 @@ function messageTeddy() {
                 <h2>Votre ourson est prêt à être adopté</h2>
             </div>
             <div class="link-box">
-                <a href="index.html" class="button-message">Continuer d'adopter</a>
+                <a href="../index.html" class="button-message">Continuer d'adopter</a>
                 <a href="basket.html" class="button-message">Voir mes adoptions</a>
             </div>
         </div> `
@@ -27,7 +27,7 @@ function messageTeddyError() {
                 <h2>La quantité n'est pas suffisante !</h2>
             </div>
             <div class="link-box">
-                <a href="index.html" class="button-message">réessayer</a>
+                <a href="../index.html" class="button-message">réessayer</a>
             </div>
         </div> `
     messagePlace.appendChild(messageBox);    

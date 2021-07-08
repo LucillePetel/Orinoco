@@ -14,7 +14,7 @@ class Article {
         let container = document.getElementById("products-list")
         const toInsert = 
             `<li class="bg-first card-teddies">
-                <a href="product.html?id=${this.id}">
+                <a href="front-end/product.html?id=${this.id}">
                     <figure class="card-product">
                         <img src="${this.imageUrl}" alt="${this.name}" class="picture-bear">
                         <figcaption>
