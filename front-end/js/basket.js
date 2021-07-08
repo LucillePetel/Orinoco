@@ -1,9 +1,7 @@
 // Page panier // 
     
 
-//Appel de la fonction affichage panier
-addOnBasketPage()
-
+//fonction affichage panier
 function addOnBasketPage() {
     let basketPage = document.getElementById("contain-basket");
     const insertBasketHTML = 
@@ -148,6 +146,32 @@ function addOnBasketPage() {
 
     });
 
+}
+
+//fonction d'affichage panier vide
+function addOnBasketPageNull() {
+    let basketPage = document.getElementById("contain-basket");
+    const insertBasketHTML = 
+        `<section class="bg-first message-box">
+            <h2>Votre panier est vide</h2>
+            <p>Vous n'avez pas encore choisi l'ourson fait pour vous ?</p>
+            <img src="img/teddy.png" alt="teddy" id="bear">
+            <div class="link-box">
+                <a href="../index.html" class="button-message">Cherchez le ici</a>
+            </div>
+        </section> `
+
+    basketPage.innerHTML += insertBasketHTML  
+
+
+}
+
+//Appel de addOnBasketPageNull si le panier est vide
+if (sessionStorage.getItem('basket') === null) {
+    addOnBasketPageNull()
+//Sinon appel de addOnBasketPage  
+} else {
+    addOnBasketPage()
 }
 
 

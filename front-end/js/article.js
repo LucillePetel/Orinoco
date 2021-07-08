@@ -10,6 +10,7 @@ class Article {
 
     }
 
+    //Affichage HTML de la page index
     addOnIndexPage() {
         let container = document.getElementById("products-list")
         const toInsert = 
@@ -28,6 +29,7 @@ class Article {
         container.innerHTML += toInsert
     }
 
+    // Affichage HTML d'un produit
     addOnproductPage() {
         let contain = document.getElementById("contain-product")
 

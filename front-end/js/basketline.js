@@ -1,3 +1,5 @@
+//Fonction d'affichage du panier 
+
 function basketLine(product) { 
     let basketPlace = document.getElementById("product-line") 
     let totalPlace = document.getElementById("total-line")

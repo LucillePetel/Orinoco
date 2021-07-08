@@ -21,6 +21,7 @@ class API {
     //Appel de l'API pour les pages product
     getArticleById() {
         let params = new URLSearchParams(document.location.search.substring(1));
+       //Affichage du produit suivant l'id
         if (params.get("id")) {
         fetch(this.url + "/" + params.get("id"))
             .then(response => response.json())
