@@ -10,6 +10,7 @@ class Article {
 
     }
 
+
     //Affichage HTML de la page index
     addOnIndexPage() {
         let container = document.getElementById("products-list")

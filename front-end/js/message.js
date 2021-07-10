@@ -67,3 +67,22 @@ function messageConfirmError() {
         </div> `
     messagePlace.appendChild(messageBox);  
 }
+
+//Message erreur 
+function messageApiError() {
+    const messagePlace = document.getElementById('teddy-message')
+    const messageBox = document.createElement('div')
+    messageBox.classList.add('message-box')
+    messageBox.innerHTML = `
+        <div>
+            <div>
+                <h2>Le serveur a rencontré une erreur !</h2>
+                <p class="text-error">Nous faisons tout notre possible pour que vous puissiez</br> adopter nos oursons</p>
+            </div>
+            <div class="link-box">
+                <a href="${window.location}" class="button-message">Réessayer</a>
+            </div>
+        </div> `
+    messagePlace.appendChild(messageBox);  
+}
+

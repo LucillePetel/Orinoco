@@ -15,8 +15,11 @@ class API {
                     newArticle.addOnIndexPage("product-list")
                 }
             }) 
-        
+            .catch(e => {
+                messageApiError(e)
+            })
     }
+    
 
     //Appel de l'API pour les pages product
     getArticleById() {
@@ -27,11 +30,14 @@ class API {
             .then(response => response.json())
             .then(data => {
                     let newArticle = new Article(data.colors, data._id, data.name, data.price, data.description, data.imageUrl)
-                    newArticle.addOnproductPage("contain-product")
-            
-                    
+                    newArticle.addOnproductPage("contain-product")      
             })
+            .catch(e => {
+                messageApiError(e)
+            })
+            
         } 
+        
     }
 
 }
