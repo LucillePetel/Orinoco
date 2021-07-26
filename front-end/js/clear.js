@@ -33,7 +33,7 @@ function deleteLine() {
                 JSON.parse(sessionStorage.getItem('basket'))
                 //Vide le sessionStorage s'il n'y a plus d'article
                 if (deleteLine.length === 1) { sessionStorage.removeItem("basket") }
-                //on recharge la page
+                //Recharge la page
                 window.location.reload();
         })
     }

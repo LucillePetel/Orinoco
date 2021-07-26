@@ -65,36 +65,36 @@ class Article {
                     </button>
                 </div>
             </div>   `
-            contain.innerHTML += insertHTML
-            let choice = contain.querySelector("#colors");
-            this.colors.forEach (function (colors) {
-                let option = document.createElement("option");
-                option.value = colors;
-                option.textContent = colors;
-                choice.appendChild(option);
-            })
+        contain.innerHTML += insertHTML
+        let choice = contain.querySelector("#colors");
+        this.colors.forEach (function (colors) {
+            let option = document.createElement("option");
+            option.value = colors;
+            option.textContent = colors;
+            choice.appendChild(option);
+        })
 
-            let customerChoise = document.querySelector(".add-btn");
+        let customerChoise = document.querySelector(".add-btn");
 
-            customerChoise.addEventListener('click', () => {
+        customerChoise.addEventListener('click', () => {
 
-                //Récupération choix couleur et stockage dans variable global this
-                this.colorChoice = document.querySelector("#colors");
-                this.colorChoice = this.colorChoice.options[this.colorChoice.selectedIndex].value;
+            //Récupération choix couleur et stockage dans variable global this
+            this.colorChoice = document.querySelector("#colors");
+            this.colorChoice = this.colorChoice.options[this.colorChoice.selectedIndex].value;
 
-                //Récupération quantité et stockage dans variable global this
-                this.quantityChoice = parseInt(document.getElementById("quantity").value);
-                
-                //Appel de la fonction d'ajout au panier si la quantité est suffisante
-                if (this.quantityChoice >= 1) {
-                    addToBasket(this);
-                    setTimeout("messageTeddy()", 400);
-                //Sinon renvoi un message d'erreur 
-                } else {
-                    messageTeddyError()
-                }
+            //Récupération quantité et stockage dans variable global this
+            this.quantityChoice = parseInt(document.getElementById("quantity").value);
+            
+            //Appel de la fonction d'ajout au panier si la quantité est suffisante
+            if (this.quantityChoice >= 1) {
+                addToBasket(this);
+                setTimeout("messageTeddy()", 400);
+            //Sinon renvoi un message d'erreur 
+            } 
+            else {
+                messageTeddyError()
+            }
 
-            }) 
+        }) 
     }
-
 }

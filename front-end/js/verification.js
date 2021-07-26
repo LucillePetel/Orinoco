@@ -14,7 +14,8 @@ const validEmail = function (inputEmail) {
         small.classList.remove('failure')
         small.classList.add('success')
         return true;
-    } else {
+    } 
+    else {
         small.innerHTML = "Adresse Non Valide" 
         small.classList.remove('success')
         small.classList.add('failure')
@@ -36,7 +37,8 @@ const validPhoneNumber = function(inputPhoneNumber) {
         smallPhoneNumber.classList.remove('failure')
         smallPhoneNumber.classList.add('success')
         return true;
-    } else {
+    } 
+    else {
         smallPhoneNumber.innerHTML = "Téléphone Non Valide"
         smallPhoneNumber.classList.remove('success')
         smallPhoneNumber.classList.add('failure')
@@ -57,7 +59,8 @@ const validName = function(inputName) {
         smallName.classList.remove('failure')
         smallName.classList.add('success')
         return true;
-    } else {
+    } 
+    else {
         smallName.innerHTML = "Nom Invalide"
         smallName.classList.remove('success')
         smallName.classList.add('failure')
@@ -78,7 +81,8 @@ const validZipCode = function(inputZipCode) {
         smallZipCode.classList.remove('failure')
         smallZipCode.classList.add('success')
         return true;
-    } else {
+    }
+    else {
         smallZipCode.innerHTML = "Code postal Non Valide"
         smallZipCode.classList.remove('success')
         smallZipCode.classList.add('failure')
@@ -99,7 +103,8 @@ const validCity = function(inputCity) {
         smallCity.classList.remove('failure')
         smallCity.classList.add('success')
         return true;
-    } else {
+    } 
+    else {
         smallCity.innerHTML = "Ville Invalide"
         smallCity.classList.remove('success')
         smallCity.classList.add('failure')

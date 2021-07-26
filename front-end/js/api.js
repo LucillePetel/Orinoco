@@ -29,8 +29,8 @@ class API {
         fetch(this.url + "/" + params.get("id"))
             .then(response => response.json())
             .then(data => {
-                    let newArticle = new Article(data.colors, data._id, data.name, data.price, data.description, data.imageUrl)
-                    newArticle.addOnproductPage("contain-product")      
+                let newArticle = new Article(data.colors, data._id, data.name, data.price, data.description, data.imageUrl)
+                newArticle.addOnproductPage("contain-product")      
             })
             .catch(e => {
                 messageApiError(e)
