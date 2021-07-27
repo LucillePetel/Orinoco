@@ -19,3 +19,12 @@ Objectif : Créer un MVP (Produit Minimum Viable) afin de demontrer le fonctionn
 - Interagir avec un web service avec JavaScript
 - Valider des données issues de sources externes
 - Gérer des événements JavaScript
+
+## Installation du projet 
+
+Vous pouvez retrouver les fichiers du baack end pour ce projet dans ce repo. 
+
+Vous aurez besoin de Node et npm. 
+
+À partir du dossier du projet, exécutez npm install. Vous pouvez ensuite exécuter le serveur avec node server. Le serveur doit fonctionner en localhost avec le port par défaut 3000. 
+Si le serveur fonctionne sur un autre port pour une raison quelconque, ça apparait sur la console au démarrage du serveur, par exemple Listening on port 3001. 
